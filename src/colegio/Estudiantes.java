@@ -1,21 +1,146 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package colegio;
 
-/**
- *
- * @author Ivan Guzman
- */
-public class Colegio {
+import java.util.Date;
+
+//Este es un nuevo comentario
+public class Estudiantes {
+
+    private String nombre;
+    private int numeroDeEstudiantes;
+    private String especialidad;
+    private final Boolean internacional;
+    private Date fechaDeIngreso;
+
+    public Estudiantes(
+            String nombre,
+            int numeroDeEstudiantes,
+            String especialidad,
+            Boolean internacional) {
+        this.nombre = nombre;
+        this.numeroDeEstudiantes = numeroDeEstudiantes;
+        this.especialidad = especialidad;
+        this.internacional = internacional;
+    }
 
     /**
-     * @param args the command line arguments
+     * El método aumenta la cantidad de estudinates en el cloegio en 9 y no la
+     * conviente en internacional
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public void ampliarPlanta() {
+        this.numeroDeEstudiantes += 9;
+        this.internacional = true;
     }
-    
-}
+
+    public Estudiantes(String nombre, int numeroDeEstudiantes, String especialidad, Boolean internacional, Date fechaDeIngreso) {
+        this.nombre = nombre;
+        this.numeroDeEstudiantes = numeroDeEstudiantes;
+        this.especialidad = especialidad;
+        this.internacional = internacional;
+        this.fechaDeIngreso = fechaDeIngreso;
+    }
+
+    /**
+     * Este método permite cambiar el nombre de la fábrica y su especialidad
+     */
+    public void reinaguracion(
+            String nuevoNombre,
+            String nuevaEspecialidad) {
+        this.nombre = nuevoNombre;
+        this.especialidad = nuevaEspecialidad;
+        this.numeroDeEstudiantes += 1;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getNumeroDeEstudiantes() {
+        return numeroDeEstudiantes;
+    }
+
+    public void setNumeroDeEstudiantes(int numeroDeEstudiantes) {
+        this.numeroDeEstudiantes = numeroDeEstudiantes;
+    }
+
+    public Date getFechaDeIngreso() {
+        return fechaDeIngreso;
+    }
+
+    public void setFechaDeIngreso(Date fechaDeIngreso) {
+        this.fechaDeIngreso = fechaDeIngreso
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    public Boolean getInternacional() {
+        return internacional;
+    }
+
+    public void setInternacional(Boolean internacional) {
+        this.internacional = internacional;
+    }
+
+    public static void main(String[] args) {
+        Colegio colegioUno = new Colegio(
+                "maria elvinia",
+                24,
+                new Date(),
+                "tecnicos",
+                false);
+        Colegio colegioDos = new Colegio(
+                "alferes real ",
+                15,
+                new Date(),
+                "Bilingue",
+                true);
+
+        System.out.println(colegioUno.getNombre());
+        System.out.println(colegioUno.getNumeroDeEstudiantes());
+        System.out.println(colegioUno.getInternacional());
+
+        colegioUno.ampliarSalones();
+
+        System.out.println(colegioUno.getNombre());
+        System.out.println(colegioUno.getNumeroDeEstudinates());
+        System.out.println(colegioUno.getInternacional());
+    }
+
+    private static class Colegio {
+
+        public Colegio() {
+        }
+
+        private Colegio(String alferes_real_, int i, Date date, String bilingue, boolean b) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private void ampliarSalones() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private boolean getInternacional() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private boolean getNumeroDeEstudiantes() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private boolean getNombre() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        private boolean getNumeroDeEstudinates() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
