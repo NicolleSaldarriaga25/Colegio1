@@ -5,11 +5,13 @@ import java.util.Date;
 //Este es un nuevo comentario
 public class Estudiantes {
 
-    private String nombre;
-    private int numeroDeEstudiantes;
-    private String especialidad;
-    private final Boolean internacional;
-    private Date fechaDeIngreso;
+    private String nombre;//Este es el nombre del estudiante
+    private int numeroDeEstudiantes; //Son los estudiantes ingresados
+    private String especialidad;// Es en lo que mejor se desempeña el estudiante
+    private final Boolean internacional;//Denota si el colegio hace becas o no
+    private Date fechaDeIngreso;//La fecha en que ingreso el estudiante
+    
+    //Este es el constructor de clase
 
     public Estudiantes(
             String nombre,
@@ -50,6 +52,8 @@ public class Estudiantes {
         this.numeroDeEstudiantes += 1;
     }
 
+    //A partir de esta línea se encuentran los métodos get y set
+    
     public String getNombre() {
         return nombre;
     }
