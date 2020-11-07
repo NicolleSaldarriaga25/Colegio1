@@ -10,6 +10,7 @@ public class Estudiantes {
     private String especialidad;// Es en lo que mejor se desempeña el estudiante
     private final Boolean internacional;//Denota si el colegio hace becas o no
     private Date fechaDeIngreso;//La fecha en que ingreso el estudiante
+    private Boolean international;
     
     //Este es el constructor de clase
 
@@ -30,7 +31,7 @@ public class Estudiantes {
      */
     public void ampliarPlanta() {
         this.numeroDeEstudiantes += 9;
-        this.internacional = true;
+        this.international=true;
     }
 
     public Estudiantes(String nombre, int numeroDeEstudiantes, String especialidad, Boolean internacional, Date fechaDeIngreso) {
@@ -91,7 +92,7 @@ public class Estudiantes {
     }
 
     public void setInternacional(Boolean internacional) {
-        this.internacional = internacional;
+        this.international = internacional;
     }
 
     public static void main(String[] args) {
@@ -147,4 +148,4 @@ public class Estudiantes {
         private boolean getNumeroDeEstudinates() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
-    }
+    

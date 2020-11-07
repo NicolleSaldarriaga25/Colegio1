@@ -9,6 +9,7 @@ package colegio;
  *
  * @author Ivan Guzman
  */
-public class ColegioSalon extends Colegio {
+public class ColegioSalones  extends Colegio {
+    
     
 }
